@@ -1,3 +1,3 @@
-export const chat = () => {
+export function chat () {
     console.log("hello");
 }
