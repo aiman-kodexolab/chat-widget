@@ -148,6 +148,7 @@ import { chat } from "./chat";
     console.log("------",msg)
     if (msg?.chat_completed && msg?.sentence) {
       const botTime = formatTime();
+      console.log('botTime',botTime);
       chat();
 
       if (!msg?.fine_tuning) {
