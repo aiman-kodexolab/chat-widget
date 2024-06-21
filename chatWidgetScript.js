@@ -6,7 +6,6 @@ import { chat } from "./chat";
     const key = scriptTag.getAttribute('data-key');
     console.log("key",key);
     const now = new Date();
-        chat();
     let hours = now.getHours();
     const minutes = now.getMinutes();
     const ampm = hours >= 12 ? "PM" : "AM";
@@ -149,6 +148,8 @@ import { chat } from "./chat";
     console.log("------",msg)
     if (msg?.chat_completed && msg?.sentence) {
       const botTime = formatTime();
+      chat();
+
       if (!msg?.fine_tuning) {
         const chatBody = document.getElementById("chat-body");
         const botMessage = document.createElement("div");
