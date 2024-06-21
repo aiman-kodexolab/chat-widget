@@ -146,10 +146,13 @@ import { chat } from "./chat";
 
   socket.on("done", (msg) => {
     console.log("------",msg)
-    if (msg?.chat_completed && msg?.sentence) {
-      const botTime = formatTime();
+    const botTime = formatTime();
       console.log('botTime',botTime);
       chat();
+    if (msg?.chat_completed && msg?.sentence) {
+    //   const botTime = formatTime();
+    //   console.log('botTime',botTime);
+    //   chat();
 
       if (!msg?.fine_tuning) {
         const chatBody = document.getElementById("chat-body");
