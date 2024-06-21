@@ -1,10 +1,12 @@
+import { chat } from "./chat";
+
 (function () {
     const formatTime = () => {
     const scriptTag = document.getElementById('chatbot-script');
     const key = scriptTag.getAttribute('data-key');
     console.log("key",key);
     const now = new Date();
-
+        chat();
     let hours = now.getHours();
     const minutes = now.getMinutes();
     const ampm = hours >= 12 ? "PM" : "AM";
